@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PDF Handling">
+    <test name="Verify Pdf content">
+        <classes>
+            <class name="com.academy.techcenture.DownloadPdf"/>
+            <class name="com.academy.techcenture.PdfHandling"/>
+            <class name="com.academy.techcenture.ExtractContent"/>
+        </classes>
+    </test>
+</suite>
