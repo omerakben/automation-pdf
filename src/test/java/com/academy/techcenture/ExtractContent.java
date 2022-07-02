@@ -28,7 +28,7 @@ public class ExtractContent {
         driver = new ChromeDriver();
     }
 
-    @Test
+    @Test (priority = 3)
     public void verifyContentInPDf() {
         //specify the url of the pdf file
         String url = "http://automationpractice.com/index.php?controller=pdf-invoice&id_order=450847.pdf";
@@ -37,6 +37,7 @@ public class ExtractContent {
             String pdfContent = readPdfContent(url);
             System.out.println(pdfContent);
             Assert.assertTrue(pdfContent.contains("Kevin Lee"));
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

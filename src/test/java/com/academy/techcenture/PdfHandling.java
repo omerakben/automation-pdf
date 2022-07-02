@@ -29,13 +29,16 @@ public class PdfHandling {
         driver = new ChromeDriver();
     }
 
-    @Test
+    @Test (priority = 2)
     public void verifyContentInPDf() {
         //specify the url of the pdf file
         String url = "http://automationpractice.com/index.php?controller=pdf-invoice&id_order=450847.pdf";
         driver.get(url);
         try {
             String pdfContent = readPdfContent(url);
+
+            System.out.println(readPdfContent(url));
+
             Assert.assertTrue(pdfContent.contains("Kevin Lee"));
         } catch (MalformedURLException e) {
             e.printStackTrace();

@@ -29,7 +29,7 @@ public class DownloadPdf {
     }
 
 
-    @Test
+    @Test (priority = 1)
     public void downloadPdf() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("http://automationpractice.com/index.php");
